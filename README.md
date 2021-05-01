@@ -1,6 +1,9 @@
 # Bitdefender GravityZone Extra
 This repo intent to add extra reports to Bitdefender GravityZone
 
+List of available reports:
+- [x] [Application Inventory Report](#application-inventory-report): First, you must run **inventory task** on your endpoits. Then, this app will help you get a **CSV** comma delimited report on the app. inventory.
+
 
 ## Application Inventory Report
 To get application inventory report, do the following steps on your **GravityZone Appliance**:
