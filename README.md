@@ -1,1 +1,29 @@
 # Bitdefender GravityZone Extra
+This repo intent to add extra reports to Bitdefender GravityZone
+
+
+## Application Inventory Report
+To get application inventory report, do the following steps on your **GravityZone Appliance**:
+```
+wget -O /home/bdadmin/get-inventory-report  https://github.com/javadmohebbi/gravityzone-extra/raw/main/build/get-inventory-report
+
+chmod +x -v /home/bdadmin/get-inventory-report
+
+/home/bdadmin/get-inventory-report -mongo-pass {MONGO_DB_PASS}
+
+#*** replace your mongo database password with {MONGO_DB_PASS}
+
+```
+
+- This tiny app will extract needed information and will create two **csv** file:
+  - **apps.csv**: A comma delimited CSV file with the further template:
+    - Application Name, Application Group, Hash, Version, Discover Date, NumberOfEndpoints
+  - **app_details.csv**: A comma delimited CSV file with the further template:
+    - Endpoint Name, Endpoint OS, Application Name, Application Group, Hash, Version, Discover Date
+- By default mentioned csv files will placed in **/home/bdadmin**
+
+
+
+
+### Need more custom report?
+Just send a request to [javad [at] openintelligence24 [dot] com](mailto:javad@openintelligence24.com)
