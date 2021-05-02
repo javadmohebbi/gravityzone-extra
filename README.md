@@ -17,7 +17,7 @@ chmod +x -v /home/bdadmin/get-inventory-report
 #*** replace your mongo database password with {MONGO_DB_PASS}
 
 ```
-
+- *** **Mongo DB password** must be encoded using **percent encoding**. Use [this website](https://www.url-encode-decode.com/) to encode your password.v
 - This tiny app will extract needed information and will create two **csv** file:
   - **apps.csv**: A comma delimited CSV file with the further template:
     - Application Name, Application Group, Hash, Version, Discover Date, NumberOfEndpoints
