@@ -55,6 +55,12 @@ func main() {
 	}
 
 	var linesWithEndpoint, linesApp []string
+	linesWithEndpoint = append(linesWithEndpoint, fmt.Sprintf("%v,%v,%v,%v,%v,%v,%v",
+		"EndpointName", "OS", "AppName", "Group", "Hash", "Version", "DisciveredOn",
+	))
+	linesApp = append(linesApp, fmt.Sprintf("%v,%v,%v,%v,%v,%v",
+		"AppName", "Group", "Hash", "Version", "DisciveredOn", "# of Endpoints",
+	))
 	for _, l := range lst {
 		for _, e := range l.Endpoints {
 			ll := fmt.Sprintf("%v,%v,%v,%v,%v,%v,%v",
