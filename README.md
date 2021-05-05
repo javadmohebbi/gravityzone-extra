@@ -3,7 +3,7 @@ This repo intent to add extra reports to Bitdefender GravityZone
 
 List of available reports:
 - [x] [Application Inventory Report](#application-inventory-report): First, you must run **inventory task** on your endpoits. Then, this app will help you get a **CSV** comma delimited report on the app. inventory.
-- [x] [Detected Hardware Report](#detected-hardware-list-report): This app will fetch detected devices which are detected by GravityZone **device control** module & write the result in **CSV** comma delimited file
+- [x] [Detected Hardware Report](#detected-hardware-list-report): This app will fetch devices which are detected by GravityZone **device control** module from database & write the result in **CSV** comma delimited file.
 
 
 ## Application Inventory Report
