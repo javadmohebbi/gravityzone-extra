@@ -26,6 +26,26 @@ chmod +x -v /home/bdadmin/get-inventory-report
 - By default mentioned csv files will placed in **/home/bdadmin**
 
 
+## Detected Hardware List Report
+Get detected hardwares on the managed endpoints. To get that do the following steps on your **GravityZone Appliance**
+```
+wget -O /home/bdadmin/hardware-report  https://github.com/javadmohebbi/gravityzone-extra/raw/main/build/hardware-report
+
+chmod +x -v /home/bdadmin/hardware-report
+
+/home/bdadmin/hardware-report -mongo-pass {MONGO_DB_PASS}
+
+#*** replace your mongo database password with {MONGO_DB_PASS}
+
+```
+- *** **Mongo DB password** must be encoded using **percent encoding**. Use [this website](https://www.url-encode-decode.com/) to encode your password.v
+- This tiny app will extract needed information and will create two **csv** file:
+  - **hwds.csv**: A comma delimited CSV file with the further template:
+    - DeviceId, DeviceName, LastDetectionDate, Number of Endpoints
+  - **hwds_details.csv**: A comma delimited CSV file with the further template:
+    - EndpointName, OS, DeviceId, DeviceName, LastDetectionDate
+- By default mentioned csv files will placed in **/home/bdadmin**
+
 
 
 ### Need more custom report?
